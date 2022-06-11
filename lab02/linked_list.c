@@ -57,6 +57,9 @@ void reverse_list(struct Node **head) {
         return;
     }
     struct Node *curr = *head;
+	if (curr == NULL) {
+		return;
+	}
     struct Node *next = (*head)->next;
     curr->next = NULL;
     while (next != NULL) {
